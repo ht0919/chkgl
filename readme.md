@@ -2,7 +2,7 @@
 
 ## 概要
 
-ARM系のChromebook(Lenovo S330)で、Linux環境にJupyter Notebookを導入し、Kaggleに送信する環境を構築しました。その作業手順を解説します。
+ARM系のChromebook(Lenovo S330)で、Linux環境にJupyter NotebookとPyTorchを導入し、作成したcsvファイルをKaggleに送信するまでの環境を構築しました。その作業手順を解説します。
 
 ## コンセプト
 
@@ -81,6 +81,10 @@ Linux環境は次の作業でインストールします。
     $ pip3 install kaggle
     - KaggleのAccountで「Create New API Token」をクリックしてAPI Tokenをダウンロードする
     - ~/.kaggleにkaggle.jsonをコピーしてパーミッションを600に設定
+
+## Kaggle API でCSVファイルをアップロードする
+
+    $ kaggle competitions submit -c titanic -f ファイル名 -m コメント
 
 ## PyTorchの導入
 
